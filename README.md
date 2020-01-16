@@ -8,7 +8,7 @@ Download OpenVINO Toolkit's ***l_openvino_toolkit_p_version.tgz*** file locally.
 Download link: https://software.intel.com/en-us/openvino-toolkit/choose-download/free-download-linux
 
 ### Step 2:
-Create a folder with the name openvino and upload the downloaded the ***l_openvino_toolkit_p_version.tgz*** file to a google drive folder i.e. openvino. 
+Create a folder in the google drive with the name openvino and upload the downloaded the ***l_openvino_toolkit_p_version.tgz*** file to a google drive folder i.e. openvino. 
 
 ### Step 2: 
 Clone the repo or upload any OpenDevNotebook on the same folder in your google drive where the OpenVINO ToolKit's ***l_openvino_toolkit_p_version.tgz*** file is present.
