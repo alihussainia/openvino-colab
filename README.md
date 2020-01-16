@@ -4,7 +4,11 @@ Open Source OpenVINO  Edge developement and deployment on Google Colab using Ope
 ## USAGE STEPS:
 
 ### Step 1: 
-Download OpenVINO Toolkit's ***l_openvino_toolkit_p_version.tgz*** locally and then upload it to a google drive folder, link to the downloading site: https://software.intel.com/en-us/openvino-toolkit/choose-download/free-download-linux
+Download OpenVINO Toolkit's ***l_openvino_toolkit_p_version.tgz*** file locally.
+Download link: https://software.intel.com/en-us/openvino-toolkit/choose-download/free-download-linux
+
+### Step 2:
+Create a folder with the name openvino and upload the downloaded the ***l_openvino_toolkit_p_version.tgz*** file to a google drive folder i.e. openvino. 
 
 ### Step 2: 
 Clone the repo or upload any OpenDevNotebook on the same folder in your google drive where the OpenVINO ToolKit's ***l_openvino_toolkit_p_version.tgz*** file is present.
