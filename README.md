@@ -21,10 +21,10 @@ Currently trying to render the output within the cell, if you can help, PLEASE C
 
 ## CONTACTS:
 
-***NAME: MUHAMMAD ALI
-   EMAIL1: alikasbati@outlook.com
-   EMAIL2: malirashid1994@gmail.com
-   Linkedin: https://www.linkedin.com/in/alihussainia/*** 
+***NAME: MUHAMMAD ALI***
+***EMAIL1: alikasbati@outlook.com***
+***EMAIL2: malirashid1994@gmail.com***
+***Linkedin: https://www.linkedin.com/in/alihussainia/*** 
 
 ## REFERENCES:
 Intel's Official Installation Guide for OpenVINO on linux: https://docs.openvinotoolkit.org/latest/_docs_install_guides_installing_openvino_linux.html#install-openvino
