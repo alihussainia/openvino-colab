@@ -23,6 +23,8 @@ Currently trying to render the output within the cell, if you can help, PLEASE C
 
 ***NAME: MUHAMMAD ALI***
 
+***SLACK USERNAME: Muhammad.Ali***
+
 ***EMAIL1: alikasbati@outlook.com***
 
 ***EMAIL2: malirashid1994@gmail.com***
