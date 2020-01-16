@@ -2,7 +2,7 @@
 Open Source OpenVINO  Edge developement and deployment on Google Colab using OpenDevNotebooks
 
 ## USAGE STEPS:
-
+$\sum_{\substack{0<i<m\0<j<n}} P(i, j)$
 ### Step 1: 
 Download OpenVINO Toolkit's "l_openvino_toolkit_p_<version>.tgz" locally and then upload it to a google drive folder, link to the downloading site: https://software.intel.com/en-us/openvino-toolkit/choose-download/free-download-linux
 
