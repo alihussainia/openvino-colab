@@ -1,5 +1,5 @@
 # OpenDevLibrary
-Open Source OpenVINO  Edge developement and deployment on Google Colab using OpenDevNotebooks
+Open Source OpenVINO  Edge developement and deployment on Google Colab using OpenNotebooks
 
 ## USAGE STEPS:
 
@@ -11,13 +11,13 @@ Download link: https://software.intel.com/en-us/openvino-toolkit/choose-download
 Create a folder in the google drive with the name openvino and upload the downloaded the ***l_openvino_toolkit_p_version.tgz*** file to a google drive folder i.e. openvino. 
 
 ### Step 2: 
-Clone the repo or upload any OpenDevNotebook on the same folder in your google drive where the OpenVINO ToolKit's ***l_openvino_toolkit_p_version.tgz*** file is present.
+Clone the repo or upload any OpenNotebook on the same folder in your google drive where the OpenVINO ToolKit's ***l_openvino_toolkit_p_version.tgz*** file is present.
 
 ### Step 3: 
 Run all the cells till initialization of the environment to successfully install and initialize OpenVINO in the OpenDevNotebook Runtime Environment.
 
 ### Step 4: 
-Click on the ***STAR BUTTON*** above and do Play with the OpenDevNotebook as you like!
+Click on the ***STAR BUTTON*** above and do Play with the OpenNotebook as you like!
 
 ## FUTURE WORK:
 
