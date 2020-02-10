@@ -11,7 +11,8 @@ Download link: https://software.intel.com/en-us/openvino-toolkit/choose-download
 Create a folder in the google drive with the name openvino and upload the downloaded the ***l_openvino_toolkit_p_version.tgz*** file to a google drive folder i.e. openvino. 
 
 ### Step 2: 
-Clone the repo or upload any OpenNotebook on the same folder in your google drive where the OpenVINO ToolKit's ***l_openvino_toolkit_p_version.tgz*** file is present.
+Add the "Open in Colab" Extension to your Browser.
+Clone or Fork the repo and open the ***OpenDevNotebook-CPU.ipynb*** in colab. Make sure to change the *file_name* variable to suite your ***l_openvino_toolkit_p_version.tgz*** file version (copy and paste the name of the downloaded file including the .tgx extension).
 
 ### Step 3: 
 Run all the cells till initialization of the environment to successfully install and initialize OpenVINO in the OpenDevNotebook Runtime Environment.
