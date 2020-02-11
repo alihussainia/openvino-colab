@@ -3,6 +3,27 @@ Open Source OpenVINO  Edge developement and deployment on Google Colab using Ope
 
 ## USAGE STEPS:
 
+## **For Python Script Install**:
+
+### Step 1:
+Open your Colab Notebook.
+
+### Step 2:
+Execute in one cell _(Including the exclamation)_:
+
+!wget "https://storage.googleapis.com/open_vino_public/openvino_initialization_script.py"
+
+### Step 3:
+Move to the next cell and execute _(Including the exclamation)_:
+
+!python openvino_initialization_script.py
+
+**Note**: You need to enter your choice of framework as the number marked against the framework in the due course of installation.
+Et Voila! You have IntelOpenVINO installed. Happy Inferencing!
+
+
+## **For Notebook**:
+
 ### Step 1: 
 Download OpenVINO Toolkit's ***l_openvino_toolkit_p_version.tgz*** file locally.
 Download link: https://software.intel.com/en-us/openvino-toolkit/choose-download/free-download-linux
