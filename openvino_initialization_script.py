@@ -36,8 +36,15 @@ install the pre-requisites one by one.)
 
 for x in choices:
   print(x,choices[x])
-choice = 5
-choice = eval(input("Please enter your choice (Default Option - 5): "))
+
+choice = input("Please enter your choice (Default Option - 5): ")
+if len(choice) = 0:
+    choice = 5
+elif choice in '1 2 3 4'.split():
+    choice = int(choice)
+if choice>5:
+    print("You have entered an invalid choice! Please rerun the script.")
+    
 print("Choice is",choice,":",choices[choice])
 if choice != 5:
    pre_install = model_optimizer + "install_prerequisites/install_prerequisites.sh "+choices[choice]
