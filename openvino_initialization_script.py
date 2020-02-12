@@ -25,36 +25,45 @@ call("sudo %s/install.sh --silent %s/silent.cfg"%(dir_name,dir_name), shell=True
 call("sudo -E %s/install_dependencies/install_openvino_dependencies.sh"%(install_dir), shell=True)
 call("source %s/bin/setupvars.sh"%(install_dir), shell=True)
 print("ENV Variables Set!")
-frameworks = ['tf','mxnet','onnx','kaldi','all']
-choices = dict(zip(range(1,6),frameworks))
+# frameworks = ['tf','mxnet','onnx','kaldi','all']
+# choices = dict(zip(range(1,6),frameworks))
 
-print("""Please enter the Choice of framework you want to work with:
-\n(Note: You should only install for the ones you would be using.
-Incase of needing to install for more than one but not all, rerun this cell and 
-install the pre-requisites one by one.)
-""")
+# print("""Please enter the Choice of framework you want to work with:
+# \n(Note: You should only install for the ones you would be using.
+# Incase of needing to install for more than one but not all, rerun this cell and 
+# install the pre-requisites one by one.)
+# """)
 
-for x in choices:
-  print(x,choices[x])
+# for x in choices:
+#   print(x,choices[x])
 
-choice = input("Please enter your choice (Default Option - 5): ")
-if len(choice) == 0:
-    choice = 5
-elif choice in '1 2 3 4'.split():
-    choice = int(choice)
-if choice>5:
-    print("You have entered an invalid choice! Please rerun the script.")
+# choice = input("Please enter your choice (Default Option - 5): ")
+# if len(choice) == 0:
+#     choice = 5
+# elif choice in '1 2 3 4'.split():
+#     choice = int(choice)
+# if choice>5:
+#     print("You have entered an invalid choice! Please rerun the script.")
     
-print("Choice is",choice,":",choices[choice])
-if choice != 5:
-   pre_install = model_optimizer + "install_prerequisites/install_prerequisites.sh "+choices[choice]
-   call("sudo %s"%(pre_install), shell=True)
-elif choice == 5:
-  # for x in choices:
-  #   pre_install = model_optimizer + "install_prerequisites/install_prerequisites.sh "+choices[x]
+# print("Choice is",choice,":",choices[choice])
+# if choice != 5:
+#    pre_install = model_optimizer + "install_prerequisites/install_prerequisites.sh "+choices[choice]
+#    call("sudo %s"%(pre_install), shell=True)
+# elif choice == 5:
+#   # for x in choices:
+#   #   pre_install = model_optimizer + "install_prerequisites/install_prerequisites.sh "+choices[x]
   #   !sudo $pre_install
-   call("sudo %s/install_prerequisites/install_prerequisites.sh"%(model_optimizer), shell=True)
-else:
-  print("Wrong Choice! Please rerun this cell and enter the correct choice!")
+call("sudo %s/install_prerequisites/install_prerequisites.sh"%(model_optimizer), shell=True)
+# else:
+#   print("Wrong Choice! Please rerun this cell and enter the correct choice!")
 
 call("sudo %s/demo/demo_squeezenet_download_convert_run.sh"%(deployment_tools), shell=True)
+
+print("\n\nIntel OpenVINO Installation Fisnished!")
+print("Please remember the following paths :-")
+print("Install Dir -", install_dir)
+print("Model Optimizer -", model_optimizer)
+print("Deployment Tools -", deployment_tools)
+print("Model Zoo -", model_zoo)
+
+print("It is recommended that you save these paths to variables in the Python runtime/Jupyter Notebooks")
