@@ -11,7 +11,7 @@ Open your Colab Notebook.
 ### Step 2:
 Execute in one cell _(Including the exclamation)_:
 
-!wget "https://github.com/alihussainia/OpenDevLibrary/blob/master/openvino_initialization_script.py"
+!wget "https://storage.googleapis.com/open_vino_public/openvino_initialization_script.py"
 
 ### Step 3:
 Move to the next cell and execute _(Including the exclamation)_:
