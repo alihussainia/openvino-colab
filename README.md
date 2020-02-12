@@ -19,7 +19,7 @@ Move to the next cell and execute _(Including the exclamation)_:
 !python openvino_initialization_script.py
 
 **Note**: You need to enter your choice of framework as the number marked against the framework in the due course of installation.
-Et Voila! You have IntelOpenVINO installed. Happy Inferencing!
+Et Voila! You have Intel OpenVINO installed. Happy Inferencing!
 
 
 ## **For Notebook**:
