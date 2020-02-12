@@ -38,7 +38,7 @@ for x in choices:
   print(x,choices[x])
 
 choice = input("Please enter your choice (Default Option - 5): ")
-if len(choice) = 0:
+if len(choice) == 0:
     choice = 5
 elif choice in '1 2 3 4'.split():
     choice = int(choice)
