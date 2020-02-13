@@ -15,7 +15,7 @@ deployment_tools = install_dir+"deployment_tools/"
 model_optimizer = install_dir+"deployment_tools/model_optimizer/"
 model_zoo = deployment_tools+"open_model_zoo/"
 
-#call('wget "https://storage.googleapis.com/open_vino_public/l_openvino_toolkit_p_2020.1.023.tgz"', shell=True)
+call('wget "https://storage.googleapis.com/open_vino_public/l_openvino_toolkit_p_2020.1.023.tgz"', shell=True)
 
 call('tar -xzf l_openvino_toolkit_p_2020.1.023.tgz', shell=True)
 call('sudo -E %s/install_openvino_dependencies.sh'%(dir_name), shell=True)
