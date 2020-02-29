@@ -1,5 +1,5 @@
 # OpenDevLibrary
-Open Source OpenVINO  Edge developement and deployment on Google Colab using Colab Notebooks
+Open Source OpenVINO Edge developement and deployment on Google Colaboratory using Colab Notebooks
 
 ## USAGE STEPS:
 
