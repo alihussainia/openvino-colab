@@ -10,9 +10,8 @@ deployment_tools = install_dir+"deployment_tools/"
 model_optimizer = install_dir+"deployment_tools/model_optimizer/"
 model_zoo = deployment_tools+"open_model_zoo/"
 
-call("""curl -X POST https://content.dropboxapi.com/2/files/download \
-  --header 'Authorization: Bearer sl.AkP0hlfDwiJGuwntmLy8rUqU8RphmphmgWQiPLrD5SSLnOMQGO7pjUdJ87WTcs4vlfNivad5s-qSE_W4JbEkU9x0D7nekL8ap03eFCvGkI8mq4JfTfp2GGfoMahjcy-qOhv2t6A6' \
-  --header 'Dropbox-API-Arg: {"path":"/openvino/l_openvino_toolkit_p_2020.1.023.tgz"}' --output l_openvino_toolkit_p_2020.1.023.tgz""", shell=True)
+call("wget 'https://opendevlibrary.s3.amazonaws.com/l_openvino_toolkit_p_2020.1.023.tgz'", shell=True)
+
 call('tar -xzf l_openvino_toolkit_p_2020.1.023.tgz', shell=True)
 call('sudo -E %s/install_openvino_dependencies.sh'%(dir_name), shell=True)
 call("sed -i 's/decline/accept/g' %s/silent.cfg && sed -i 's/#INTEL_SW_IMPROVEMENT/INTEL_SW_IMPROVEMENT/g' %s/silent.cfg"%(dir_name,dir_name), shell=True)
