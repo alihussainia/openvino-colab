@@ -3,16 +3,16 @@ Open Source OpenVINO  Edge developement and deployment on Google Colab using Col
 
 ## USAGE STEPS:
 
-### Step 1:Package installation on Googel Colab. [Ref: Demp.ipynb](https://github.com/alihussainia/openvino-colab/blob/master/demo.ipynb)
+### Step 1:Package installation on Google Colab. [Ref: Demp.ipynb](https://github.com/alihussainia/openvino-colab/blob/master/demo.ipynb)
 Run the command in the first cell of your Google Colab to install the `openvino-colab` package. 
 
-```python
+```python3
 !pip install openvino-colab
 ```
 ### Step 2:Importing openvino-colab into your notebook [Ref: Demp.ipynb](https://github.com/alihussainia/openvino-colab/blob/master/demo.ipynb)
 Run the below command in a new cell to install the OpenVINO toolkit in Google Colab.
 
-```python
+```python3
 import openvino_colab
 ```
 
