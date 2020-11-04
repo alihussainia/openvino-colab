@@ -64,4 +64,4 @@ else:
 
 call("sudo %s/demo/demo_squeezenet_download_convert_run.sh"%(deployment_tools), shell=True)
 
-print("\n\nIntel OpenVINO Installation Fisnished!")
+print("\n\nIntel OpenVINO Installation Finished!")
