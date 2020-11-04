@@ -30,3 +30,6 @@ import openvino_colab
 
 ### Model used in Demo.ipynb i.e. vehicle-attributes-recognition-barrier-0039:
 [https://docs.openvinotoolkit.org/2019_R1/_vehicle_attributes_recognition_barrier_0039_description_vehicle_attributes_recognition_barrier_0039.html]
+
+### colabcode package
+[https://github.com/abhishekkrthakur/colabcode]
