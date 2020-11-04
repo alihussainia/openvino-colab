@@ -3,19 +3,19 @@ Open Source OpenVINO  Edge developement and deployment on Google Colab using Col
 
 ## USAGE STEPS:
 
-### Step 1: Package installation on Google Colab. [Ref: Demo.ipynb](https://github.com/alihussainia/openvino-colab/blob/master/demo.ipynb)
+### Step 1: Package installation on Google Colab. <a href="https://github.com/alihussainia/openvino-colab/blob/master/demo.ipynb" target=_blank>Ref: Demo.ipynb</a>
 Run the command in the first cell of your Google Colab to install the `openvino-colab` package. 
 
 ```python3
 !pip install openvino-colab
 ```
-### Step 2: Importing openvino-colab into your notebook [Ref: Demo.ipynb](https://github.com/alihussainia/openvino-colab/blob/master/demo.ipynb)
+### Step 2: Importing openvino-colab into your notebook <a href="https://github.com/alihussainia/openvino-colab/blob/master/demo.ipynb" target=_blank>Ref: Demo.ipynb</a>
 Run the below command in a new cell to install the OpenVINO toolkit in Google Colab.
 
 ```python3
 import openvino_colab
 ```
-### Step 3 (Optional): Importing server function into your notebook [Ref: Demo.ipynb](https://github.com/alihussainia/openvino-colab/blob/master/demo.ipynb)
+### Step 3 (Optional): Importing server function into your notebook <a href="https://github.com/alihussainia/openvino-colab/blob/master/demo.ipynb" target=_blank>Ref: Demo.ipynb</a>
 
 ```python3
 from openvino_colab import server
@@ -40,21 +40,21 @@ To Enable `Copy/Paste` in server terminals:
 
 - Use Chrome Browser
   
-- visit <a target=blank>chrome://settings/content/clipboard</a> and add your xyz.ngork.io link there.
+- visit <a href="chrome://settings/content/clipboard" target=_blank>chrome://settings/content/clipboard</a> and add your xyz.ngork.io link there.
 
 ## REFERENCES:
 
 ### OpenVINO-Colab Demo Google Colab Notebook:
-[https://github.com/alihussainia/openvino-colab/blob/master/demo.ipynb]
+<a href="https://github.com/alihussainia/openvino-colab/blob/master/demo.ipynb" target=_blank>Demo.ipynb</a>
 
 ### Intel's Official Installation Guide for OpenVINO on linux: 
-[https://docs.openvinotoolkit.org/latest/_docs_install_guides_installing_openvino_linux.html#install-openvino]
+<a href="https://docs.openvinotoolkit.org/latest/_docs_install_guides_installing_openvino_linux.html#install-openvino" target=_blank>Link</a>
 
-### OpenVINO-Colab package on PyPi Repository: 
-[https://pypi.org/project/openvino-colab/]
+### OpenVINO-Colab package on PyPi Repository:
+<a href="https://pypi.org/project/openvino-colab/" target=_blank>Link</a>
 
 ### Model used in Demo.ipynb i.e. vehicle-attributes-recognition-barrier-0039:
-[https://docs.openvinotoolkit.org/2019_R1/_vehicle_attributes_recognition_barrier_0039_description_vehicle_attributes_recognition_barrier_0039.html]
+<a href="https://docs.openvinotoolkit.org/2019_R1/_vehicle_attributes_recognition_barrier_0039_description_vehicle_attributes_recognition_barrier_0039.html" target=_blank>Link</a>
 
 ### colabcode package
-[https://github.com/abhishekkrthakur/colabcode]
+<a href="https://github.com/abhishekkrthakur/colabcode" target=_blank>Link</a>
