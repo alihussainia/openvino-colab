@@ -1,5 +1,7 @@
 # -*- coding: utf-8 -*-
 from subprocess import call
+call("pip install pyngrok==4.1.12", shell=True)
+from .code import server
 
 #Defining the Important Paths
 
