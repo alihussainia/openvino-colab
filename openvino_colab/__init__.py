@@ -5,7 +5,7 @@ from .code import server
 
 #Defining the Important Paths
 
-file_name = "l_openvino_toolkit_p_2020.1.023.tgz" #change the filename if version does not match
+file_name = "l_openvino_toolkit_p_2021.2.185.tgz" #change the filename if version does not match
 dir_name = file_name[:-4]
 install_dir = "/opt/intel/openvino/"
 deployment_tools = install_dir+"deployment_tools/"
