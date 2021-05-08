@@ -1,20 +1,20 @@
 # -*- coding: utf-8 -*-
 from subprocess import call
 call("pip install pyngrok==4.1.12", shell=True)
-from .code import server
+from code import server
 
 #Defining the Important Paths
 
-file_name = "l_openvino_toolkit_p_2021.2.185.tgz" #change the filename if version does not match
+file_name = "l_openvino_toolkit_p_2021.3.394_online.tgz" #change the filename if version does not match
 dir_name = file_name[:-4]
-install_dir = "/opt/intel/openvino/"
+install_dir = "/opt/intel/openvino_2021/"
 deployment_tools = install_dir+"deployment_tools/"
 model_optimizer = install_dir+"deployment_tools/model_optimizer/"
 model_zoo = deployment_tools+"open_model_zoo/"
 
-call("wget 'https://objectstorage.ap-mumbai-1.oraclecloud.com/n/bms8xv0rrykq/b/opendevlibrary/o/l_openvino_toolkit_p_2021.2.185.tgz'", shell=True)
+call("wget 'https://objectstorage.ap-mumbai-1.oraclecloud.com/n/bms8xv0rrykq/b/opendevlibrary/o/l_openvino_toolkit_p_2021.3.394_online.tgz'", shell=True)
 
-call('tar -xzf '%(file_name), shell=True)
+call('tar -xzf l_openvino_toolkit_p_2021.3.394_online.tgz', shell=True)
 call('sudo -E %s/install_openvino_dependencies.sh'%(dir_name), shell=True)
 call("sed -i 's/decline/accept/g' %s/silent.cfg && sed -i 's/#INTEL_SW_IMPROVEMENT/INTEL_SW_IMPROVEMENT/g' %s/silent.cfg"%(dir_name,dir_name), shell=True)
 print("Installed OpenVINO Dependencies. Installing OpenVINO...")
