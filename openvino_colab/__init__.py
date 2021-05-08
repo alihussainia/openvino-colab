@@ -12,7 +12,7 @@ deployment_tools = install_dir+"deployment_tools/"
 model_optimizer = install_dir+"deployment_tools/model_optimizer/"
 model_zoo = deployment_tools+"open_model_zoo/"
 
-call("wget 'https://opendevlibrary.s3.amazonaws.com/l_openvino_toolkit_p_2021.2.185.tgz'", shell=True)
+call("wget 'https://objectstorage.ap-mumbai-1.oraclecloud.com/n/bms8xv0rrykq/b/opendevlibrary/o/l_openvino_toolkit_p_2021.2.185.tgz'", shell=True)
 
 call('tar -xzf l_openvino_toolkit_p_2020.1.023.tgz', shell=True)
 call('sudo -E %s/install_openvino_dependencies.sh'%(dir_name), shell=True)
