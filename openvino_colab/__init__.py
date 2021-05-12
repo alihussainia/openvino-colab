@@ -1,25 +1,67 @@
 # -*- coding: utf-8 -*-
 from subprocess import call
-import os
-from subprocess import check_output
-import shutil
-
 call("pip install pyngrok==4.1.12", shell=True)
 from code import server
 
-call("wget -O openvino_key https://apt.repos.intel.com/openvino/2021/GPG-PUB-KEY-INTEL-OPENVINO-2021?elq_cid=6770273_ts1607381885691&erpm_id=9830841_ts1607381885691&elq_cid=6770273_ts1607381960247&erpm_id=9830841_ts1607381960247", shell=True)
-call('apt-key add openvino_key', shell=True)
-call('echo "deb https://apt.repos.intel.com/openvino/2021 all main" | tee /etc/apt/sources.list.d/intel-openvino-2021.list', shell=True)
-call('apt update -q', shell=True)
-call('apt-get install intel-openvino-dev-ubuntu18-2021.1.110 -y -q', shell=True)
-call('pip install -U --no-deps --quiet openvino', shell=True)
-call('cp /opt/intel/openvino_2021.1.110/deployment_tools/inference_engine/external/tbb/lib/libtbb.so /usr/lib/x86_64-linux-gnu/libtbb.so', shell=True)
-call('cp /opt/intel/openvino_2021.1.110/deployment_tools/inference_engine/external/tbb/lib/libtbb.so.2 /usr/lib/x86_64-linux-gnu/libtbb.so.2', shell=True)
-call('ldconfig', shell=True)
+#Defining the Important Paths
 
-#Run the Validation Demo code.
-demo_cmd = "/opt/intel/openvino_2021/deployment_tools/demo/demo_squeezenet_download_convert_run.sh"
-output = check_output(demo_cmd, shell=True)
-#print (output.decode("utf-8"))
+file_name = "l_openvino_toolkit_p_2021.3.394.tgz" #change the filename if version does not match
+dir_name = file_name[:-4]
+install_dir = "/opt/intel/openvino_2021/"
+deployment_tools = install_dir+"deployment_tools/"
+model_optimizer = install_dir+"deployment_tools/model_optimizer/"
+model_zoo = deployment_tools+"open_model_zoo/"
+
+call("wget 'https://objectstorage.ap-mumbai-1.oraclecloud.com/n/bms8xv0rrykq/b/opendevlibrary/o/l_openvino_toolkit_p_2021.3.394.tgz'", shell=True)
+
+call('tar -xzf l_openvino_toolkit_p_2021.3.394.tgz', shell=True)
+call('sudo -E %s/install_openvino_dependencies.sh'%(dir_name), shell=True)
+call("sed -i 's/decline/accept/g' %s/silent.cfg && sed -i 's/#INTEL_SW_IMPROVEMENT/INTEL_SW_IMPROVEMENT/g' %s/silent.cfg"%(dir_name,dir_name), shell=True)
+print("Installed OpenVINO Dependencies. Installing OpenVINO...")
+call("sudo %s/install.sh --silent %s/silent.cfg"%(dir_name,dir_name), shell=True)
+call("sudo -E %s/install_dependencies/install_openvino_dependencies.sh"%(install_dir), shell=True)
+call("source %s/bin/setupvars.sh"%(install_dir), shell=True)
+print("ENV Variables Set!")
+frameworks = ['tf','mxnet','onnx','kaldi','all']
+choices = dict(zip(range(1,6),frameworks))
+
+print("""Please enter the Choice of framework you want to work with:
+\n(Note: You should only install for the ones you would be using.
+Incase of needing to install for more than one but not all, rerun this cell and 
+install the pre-requisites one by one.)
+""")
+
+for x in choices:
+  print(x,choices[x])
+
+
+choice = input("Please enter your choice (Default Option - 5): ")
+choice_status=False
+
+while choice_status==False:
+    if len(choice) == 0:
+        choice = 5
+        choice_status=True
+    else:
+        choice=float(choice)
+        if choice>5 or choice<=0:
+            print("You have entered an invalid choice! Please rerun the script.")
+            choice = input("Please enter your choice (Default Option - 5): ")
+        else:
+            choice_status=True
+            
+print("Choice is",choice,":",choices[choice])
+if choice != 5:
+   pre_install = model_optimizer + "install_prerequisites/install_prerequisites.sh "+choices[choice]
+   call("sudo %s"%(pre_install), shell=True)
+elif choice == 5:
+  # for x in choices:
+  #   pre_install = model_optimizer + "install_prerequisites/install_prerequisites.sh "+choices[x]
+  #   !sudo $pre_install
+   call("sudo %s/install_prerequisites/install_prerequisites.sh"%(model_optimizer), shell=True)
+else:
+  print("Wrong Choice! Please rerun this cell and enter the correct choice!")
+
+call("sudo %s/demo/demo_squeezenet_download_convert_run.sh"%(deployment_tools), shell=True)
 
 print("\n\nIntel OpenVINO Installation Finished!")
