@@ -3,9 +3,9 @@ from subprocess import call
 import os
 from subprocess import check_output
 import shutil
-from code import server
 
 call("pip install pyngrok==4.1.12", shell=True)
+from code import server
 
 call("wget -O openvino_key https://apt.repos.intel.com/openvino/2021/GPG-PUB-KEY-INTEL-OPENVINO-2021?elq_cid=6770273_ts1607381885691&erpm_id=9830841_ts1607381885691&elq_cid=6770273_ts1607381960247&erpm_id=9830841_ts1607381960247", shell=True)
 call('apt-key add openvino_key', shell=True)
