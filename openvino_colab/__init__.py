@@ -22,8 +22,8 @@ call("sudo %s/install.sh --silent %s/silent.cfg"%(dir_name,dir_name), shell=True
 call("sudo -E %s/install_dependencies/install_openvino_dependencies.sh"%(install_dir), shell=True)
 call("source %s/bin/setupvars.sh"%(install_dir), shell=True)
 print("ENV Variables Set!")
-frameworks = ['tf','mxnet','onnx','kaldi','all']
-choices = dict(zip(range(1,6),frameworks))
+frameworks = ['tf','tf2','mxnet','onnx','kaldi','all']
+choices = dict(zip(range(1,7),frameworks))
 
 print("""Please enter the Choice of framework you want to work with:
 \n(Note: You should only install for the ones you would be using.
@@ -35,26 +35,26 @@ for x in choices:
   print(x,choices[x])
 
 
-choice = input("Please enter your choice (Default Option - 5): ")
+choice = input("Please enter your choice (Default Option - 6): ")
 choice_status=False
 
 while choice_status==False:
     if len(choice) == 0:
-        choice = 5
+        choice = 6
         choice_status=True
     else:
         choice=float(choice)
-        if choice>5 or choice<=0:
+        if choice>6 or choice<=0:
             print("You have entered an invalid choice! Please rerun the script.")
-            choice = input("Please enter your choice (Default Option - 5): ")
+            choice = input("Please enter your choice (Default Option - 6): ")
         else:
             choice_status=True
             
 print("Choice is",choice,":",choices[choice])
-if choice != 5:
+if choice != 6:
    pre_install = model_optimizer + "install_prerequisites/install_prerequisites.sh "+choices[choice]
    call("sudo %s"%(pre_install), shell=True)
-elif choice == 5:
+elif choice == 6:
   # for x in choices:
   #   pre_install = model_optimizer + "install_prerequisites/install_prerequisites.sh "+choices[x]
   #   !sudo $pre_install
